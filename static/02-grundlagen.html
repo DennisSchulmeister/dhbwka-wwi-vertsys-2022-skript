@@ -1,0 +1,282 @@
+<!-- ============================= -->
+<!-- Grundlagen verteilter Systeme -->
+<!-- ============================= -->
+<section data-chapter data-title="Grundlagen verteilter Systeme"></section>
+
+<!-- ------------------- -->
+<!-- Was ist ein System? -->
+<!-- ------------------- -->
+<section id="gl-system" data-icon="icon-file-text2" data-title="Was ist ein System?">
+    TODO
+</section>
+
+<section id="gl-whfragen" data-icon="icon-list-numbered" data-title="Wiederholungsfragen" data-background-color="rgb(231, 221, 141)">
+    <lsx-tab-pages>
+        <lsx-tab-page title="Definitionen">
+            <p>
+                Der nachfolgende Lückentext soll die Definition eines verteilten Systems und
+                einer verteilten Anwendung wiedergeben. Bediene dich daher aus folgendem
+                Wortvorrat, um die Definition zu vervollständigen.
+            </p>
+            <div class="dhbw-begriffswolke d-flex justify-content-center">
+                <table>
+                    <tr>
+                        <td>Nachrichten</td>
+                        <td>System</td>
+                        <td>Austausch</td>
+                        <td>Komponenten</td>
+                    </tr>
+                    <tr>
+                        <td>Klassen</td>
+                        <td>Problem</td>
+                        <td>kommunizieren</td>
+                        <td>Aufruf</td>
+                    </tr>
+                    <tr>
+                        <td>Softwarekomponenten</td>
+                        <td>Schnittstellen</td>
+                        <td>Interfaces</td>
+                        <td>Lösung</td>
+                    </tr>
+                    <tr>
+                        <td>Methoden</td>
+                        <td>verteiltes</td>
+                        <td>Kollektion</td>
+                        <td>Computer</td>
+                    </tr>
+                    <tr>
+                        <td>unabhängiger</td>
+                        <td>Anwendung</td>
+                        <td>System</td>
+                        <td>schicken</td>
+                    </tr>
+                    <tr>
+                        <td>kommunizieren</td>
+                        <td>System</td>
+                        <td>Komponenten</td>
+                        <td>Netzwerk</td>
+                    </tr>
+                </table>
+            </div>
+
+            <h4>Verteiltes System</h4>
+            <p style="margin-bottom: 1.5em;">
+                Ein
+                <span class="dhbw-wortluecke"></span>
+                <span class="dhbw-wortluecke"></span>
+                ist ein
+                <span class="dhbw-wortluecke"></span>,
+                in dem sich Hardware- und
+                <span class="dhbw-wortluecke"></span>
+                auf mehreren Computern befinden und diese nur über den
+                <span class="dhbw-wortluecke"></span>
+                von
+                <span class="dhbw-wortluecke"></span>
+                <span class="dhbw-wortluecke"></span>,
+                um ihre Aktionen zu koordinieren.
+            </p>
+
+            <h4>Verteilte Anwendung</h4>
+            <p style="margin-bottom: 1.5em;">
+                Eine verteilte Anwendung ist eine
+                <span class="dhbw-wortluecke"></span>,
+                die ein verteiltes System zur
+                <span class="dhbw-wortluecke"></span>
+                des Anwendungsproblems nutzt und aus mehreren
+                <span class="dhbw-wortluecke"></span>
+                besteht, die über wohl-definierte
+                <span class="dhbw-wortluecke"></span>
+                mit anderen Komponenten des Systems und dem Anwender
+                <span class="dhbw-wortluecke"></span>.
+            </p>
+
+            <hr />
+
+            <p style="width: 100%; transform: scaleY(-1) scaleX(-1); display: inline-block;">
+                <small>
+                    <b>Lösung:</b> <br />
+                    verteiltes, System, System, Softwarekomponenten, Austausch, Nachrichten, kommunizieren <br />
+                    Anwendung, Lösung, Komponenten, Schnittstellen, kommunizieren
+                </small>
+            </p>
+        </lsx-tab-page>
+
+        <lsx-tab-page title="Welche Aussage stimmt?">
+            <lsx-quiz>
+                <lsx-exercise>
+                    <lsx-question
+                        type = "single-choice"
+                        text = "a) Nur eine der folgenden Aussagen ist richtig. Welche?"
+                    >
+                        <lsx-answer class="dhbw-fontsize-small">
+                            Heutige Computer sind eigentlich immer verteilte Systeme, da jeder Computer
+                            heutzutage über mehr als einen Rechenkern verfügt.
+                        </lsx-answer>
+                        <lsx-answer correct class="dhbw-fontsize-small">
+                            Eine der Hauptaufgaben verteilter Systeme ist die Parallelisierung komplexer
+                            Berechnungen, für die ein einzelner Computer zu langsam wäre.
+                        </lsx-answer>
+                        <lsx-answer class="dhbw-fontsize-small">
+                            Auch wenn man in der Regel von kooperierenden Programmen auf mehreren Rechnern ausgeht,
+                            können ganz kleine, verteilte Systeme nur aus einem Programm auf einem Rechner bestehen.
+                        </lsx-answer>
+                    </lsx-question>
+                    <lsx-question
+                        type = "single-choice"
+                        text = "b) Welches ist keine verteilte Anwendung im Sinne dieser Vorlesung?"
+                    >
+                        <lsx-answer class="dhbw-fontsize-small">
+                            Ein zu Forschungszwecken eingesetzter Supercomputer besteht in Wirklichkeit aus vielen
+                            kleinen Computern, auf die sich die Rechenlast verteilt.
+                        </lsx-answer>
+                        <lsx-answer class="dhbw-fontsize-small">
+                            Eine in den 1980ern entwickelte Auftragsverwaltung einer kleinen Fabrik legt einmal am Tag
+                            eine Datei mit Produktionsaufträgen auf einem Fileserver ab. Dort wird sie dann von einem
+                            anderen Programm ausgelesen, das damit die Fertigungsanlagen steuert.
+                        </lsx-answer>
+                        <lsx-answer correct class="dhbw-fontsize-small">
+                            Um die Rechenleistung moderner Prozessoren besser ausnutzen zu können, startet sich ein Programm
+                            gleich mehrfach. Die unabhängig voneinander laufenden Instanzen können deshalb nur über Nachrichten
+                            miteinander kommunizieren (<a href="https://de.wikipedia.org/wiki/Interprozesskommunikation" target="_blank">Interprozesskommunikation</a>).
+                        </lsx-answer>
+                        <lsx-answer class="dhbw-fontsize-small">
+                            In einem Rennspiel können mehrere Spieler gegeneinander antreten. Ein Spieler muss jedoch die Leitung
+                            übernehmen, was bedeutet, dass sich alle anderen Spieler mit seinem Rechner verbinden müssen.
+                        </lsx-answer>
+                    </lsx-question>
+                    <lsx-question
+                        type = "single-choice"
+                        text = "c) Welches ist kein verteiltes System?"
+                    >
+                        <lsx-answer class="dhbw-fontsize-small">
+                            Hunderte von Computern nutzen die inaktive Zeit, während der Bildschirm gesperrt ist, um komplizierte
+                            Berechnungen durchzuführen. Dabei werden die Rechner über das Internet koordiniert, so dass eine möglichst
+                            optimale Aufgabenverteilung entsteht.
+                        </lsx-answer>
+                        <lsx-answer class="dhbw-fontsize-small">
+                            Das Internet, welches aus einer unüberschaubar großen Anzahl lose gekoppelter Einzelsysteme und
+                            Netzwerke besteht, die alle über dieselbe Protokollfamilie miteinander kommunizieren.
+                        </lsx-answer>
+                        <lsx-answer correct class="dhbw-fontsize-small">
+                            Cloud Computing: Durch einen Kurzschluss im Netzwerkkabel geht einer deiner Computer in Rauch auf.
+                            Vor lauter Nebel kannst du aber nicht sagen welcher.
+                        </lsx-answer>
+                    </lsx-question>
+                    <lsx-question
+                        type = "single-choice"
+                        text = "d) Welches sind die richtigen Definitionen von Vertraulichkeit und Datenintegrität?"
+                    >
+                        <lsx-answer correct class="dhbw-fontsize-small">
+                            Vertraulichkeit bedeutet, dass nur berechtigte Personen auf sensible Daten zugreifen können. <br />
+                            Datenintegrität bedeutet, dass die Daten nicht unbemerkt verfälscht werden können.
+                        </lsx-answer>
+                        <lsx-answer class="dhbw-fontsize-small">
+                            Vertraulichkeit bedeutet, dass die Herkunft fremder Daten zweifelsfrei festgestellt werden kann. <br />
+                            Datenintegrität bedeutet, dass die Daten nicht verfälscht werden können.
+                        </lsx-answer>
+                        <lsx-answer class="dhbw-fontsize-small">
+                            Vertraulichkeit bedeutet, dass die Daten einer Anwendung nicht verfälscht werden können. <br />
+                            Datenintegrität bedeutet, dass die Herkunft der Daten zweifelsfrei festgestellt werden kann.
+                        </lsx-answer>
+                    </lsx-question>
+                </lsx-exercise>
+            </lsx-quiz>
+        </lsx-tab-page>
+
+        <lsx-tab-page title="Begriffe zuordnen">
+            <p>
+                Ordne die nachfolgenden Begriffe den untenstehenden Definitionen zu.
+            </p>
+            <div class="dhbw-begriffswolke d-flex justify-content-center">
+                <table>
+                    <tr>
+                        <td>Fehler maskieren</td>
+                        <td>Authentizität</td>
+                        <td>Erweiterbarkeit</td>
+                        <td>Zugriffstransparenz</td>
+                    </tr>
+                    <tr>
+                        <td>Ortstransparenz</td>
+                        <td>Horizontale Skalierung</td>
+                        <td>CAP-Theorem</td>
+                        <td>Fehler vermeiden</td>
+                    </tr>
+                </table>
+            </div>
+
+            <p style="margin-bottom: 1.5em;">
+                <!-- Horizontale Skalierung -->
+                a) <span class="dhbw-langer-strich"></span> <br />
+                Um die Leistung eines verteilten Systems zu steigern, werden einfach weitere Computer
+                hinzugefügt. An den bereits vorhandenen Computern sowie den darauf laufenden Programmen
+                müssen hierfür keine nennenswerten Änderungen vorgenommen werden.
+            </p>
+            <p style="margin-bottom: 1.5em;">
+                <!-- Zugriffstransparenz -->
+                b) <span class="dhbw-langer-strich"></span> <br />
+                Egal ob man als Anwender oder als Entwickler auf eine Ressource zugreift, es sollte
+                keinen Unterschied machen, ob diese sich auf dem eigenen oder einem anderen Computer
+                befindet. Der Zugriff erfolgt immer auf dieselbe Weise.
+            </p>
+            <p style="margin-bottom: 1.5em;">
+                <!-- Erweiterbarkeit -->
+                c) <span class="dhbw-langer-strich"></span> <br />
+                Sowohl die Systemarchitektur als auch die Softwarearchitektur sind flexibel genug,
+                um jederzeit weitere Funktionen hinzufügen zu können, ohne gleich alles auseinander
+                nehmen zu müssen. Denn nichts ist so beständig wie der Wandel.
+            </p>
+            <p style="margin-bottom: 1.5em;">
+                <!-- Fehler vermeiden -->
+                d) <span class="dhbw-langer-strich"></span> <br />
+                Beim Programmieren darf man auf keinen Fall am falschen Ende sparen. Lieber investiert
+                man etwas mehr Arbeit und bietet dafür zum Beispiel eine komfortable, selbsterklärende
+                Benutzeroberfläche oder achtet darauf, selbst die eher unwahrscheinlichen Ausnahmen
+                sauber zu behandeln als einen Programmabsturz zu riskieren.
+            </p>
+            <p style="margin-bottom: 1.5em;">
+                <!-- Authentizität -->
+                e) <span class="dhbw-langer-strich"></span> <br />
+                Durch asymmetrische Verschlüsselungsverfahren und darauf aufbauende Public-Key/Private-Key-Verfahren
+                kann ein Anwender sicher sein, sich nicht mit einem kompromittierten Server zu verbinden.
+                Idealerweise kann auf dieselbe Weise auch die Identität des Benutzers überprüft werden.
+            </p>
+            <p style="margin-bottom: 1.5em;">
+                <!-- CAP-Theorem -->
+                f) <span class="dhbw-langer-strich"></span> <br />
+                Wie schön wäre eine Welt, in der jede verteilte Anwendung stets mit konsistenten Daten arbeiten
+                könnte, hochverfügbar wäre und selbst der Ausfall einzelner Komponenten keine wirkliche Störung
+                wäre. Doch leider ist das nur ein schöner Traum, der nie wahr werden kann. Eine Anwendung kann
+                immer nur zwei, niemals aber alle drei Kriterien erfüllen.
+            </p>
+            <p style="margin-bottom: 1.5em;">
+                <!-- Ortstransparenz -->
+                g) <span class="dhbw-langer-strich"></span> <br />
+                <i><a href="https://www.youtube.com/watch?v=MWF7HTOT8BU" target="_blank">Heute hier, morgen dort</a>,
+                bin kaum da, muss ich fort. So vergeht Jahr um Jahr, und es ist mir längst klar, dass nichts bleibt
+                wie es war.</i> Dieser Songtext von Hannes Wader beschreibt auch eine wichtige Anforderung an
+                verteilte Anwendungen.
+            </p>
+            <p style="margin-bottom: 1.5em;">
+                <!-- Fehler maskieren -->
+                h) <span class="dhbw-langer-strich"></span> <br />
+                Geht mal was schief ist das oft eigentlich gar nicht so schlimm. Nicht jeder Fehler erfordert gleich
+                die volle Aufmerksamkeit des Anwenders. Oft kann das System die fehlgeschlagene Aktion einfach nochmal
+                versuchen oder sonst wie um das Problem herum arbeiten.
+            </p>
+
+            <hr />
+
+            <p style="width: 100%; transform: scaleY(-1) scaleX(-1); display: inline-block;">
+                <small>
+                    <b>Lösung:</b> Horizontale Skalierung, Zugriffstransparenz, Erweiterbarkeit, <br />
+                    Fehler vermeiden, Authentizität, CAP-Theorem, Ortstransparenz, Fehler maskieren
+                </small>
+            </p>
+        </lsx-tab-page>
+    </lsx-tab-pages>
+</section>
+
+<!--
+<section id="gl-xxx" data-icon="icon-" data-title="">
+</section>
+-->
