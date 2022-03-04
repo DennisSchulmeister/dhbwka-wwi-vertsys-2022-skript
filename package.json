@@ -23,7 +23,8 @@
     "scripts": {
         "clean": "node scripts/clean.js",
         "build": "npm run clean; node scripts/build-static.js; node scripts/esbuild-bundle.js",
-        "start": "node scripts/esbuild-serve.js"
+        "start": "node scripts/esbuild-serve.js",
+        "publish": "scripts/publish.sh"
     },
     "config": {
         "src_dir": "src",
